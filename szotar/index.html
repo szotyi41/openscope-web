@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="Úr Balázs" >
+	<link rel="Shortcut Icon" href="img/favicon.ico" type="image/x-icon">
+	<base href="../">
+
+	<title>Openscope - szótár</title>
+
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/custom.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="container">
+
+		<!-- Static navbar -->
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Navigáció átváltása</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.html"><img src="img/scope_long.png" alt="Openscope"></a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="otrs/customer.pl?Action=Login&User=anonymous&Password=otrs123">Hibabejelentés</a></li>
+                                                <li class="active"><a href="szotar">Szótár</a></li>
+                                                <li><a href="otrs/public.pl?Action=PublicFAQExplorer;CategoryID=8">Tananyag</a></li>
+                                                <li><a href="otrs/public.pl?Action=PublicFAQExplorer;CategoryID=6">Projektek</a></li>
+                                                <li><a href="otrs/public.pl?Action=PublicFAQExplorer;CategoryID=7">Fordítók</a></li>
+
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="otrs/customer.pl">Belépés / Regisztráció</a></li>
+					</ul>
+				</div><!--/.nav-collapse -->
+			</div><!--/.container-fluid -->
+		</nav>
+
+		<!-- Main component for a primary marketing message or call to action -->
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h2 class="panel-title">Terminológiai szótár</h2>
+			</div>
+			<div class="panel-body">
+				<p>Kezdje el gépelni a keresendő szót, és a szótár megpróbálja gépelés közben megtalálni azt. A keresés csak az angol kifejezésekben történik meg. A keresés megkezdéséhez <strong>legalább 2 karaktert</strong> kell beírni a lenti keresőmezőbe.</p>
+				<label for="glosar-search">Keresendő szó vagy kifejezés:</label><br>
+				<input id="glosar-search" type="text" autofocus>
+				<hr>
+				<h3>Találatok</h3>
+				<div id="glosar-result">Először gépeljen valamit…</div>
+			</div>
+		</div>
+
+	</div> <!-- /container -->
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" >
+var glosarSearch = document.getElementById("glosar-search");
+var glosarResult = document.getElementById("glosar-result");
+var xhttp        = new XMLHttpRequest();
+
+xhttp.onreadystatechange = function() {
+	if (xhttp.readyState == 4 && xhttp.status == 200) {
+		results = JSON.parse(xhttp.responseText);
+		glosarResult.innerHTML = "";
+		
+		if (results.length == 0) {
+			glosarResult.innerHTML = "Nincs találat!";
+		} else {
+			for (var i in results) {
+				glosarResult.innerHTML += "<strong>" + results[i].en + "</strong> = " + results[i].hu + "<br>\n";
+			}
+		}
+	}
+}
+
+glosarSearch.addEventListener("keyup", function() {
+	if (this.value.length < 2) {
+		glosarResult.innerHTML = "Először gépeljen valamit…";
+		return false;
+	}
+	
+	xhttp.open("POST", "szotar/glosar.php", true);
+	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xhttp.send("action=search&term=" + this.value);
+});
+</script>
+</body>
+</html>
