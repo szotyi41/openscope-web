@@ -1,0 +1,35 @@
+body {
+  background-color: #fff6ee;
+}
+
+.navbar-default {
+  border-bottom: 2px solid Cyan;
+}
+
+.navbar-default .navbar-toggle {
+  border-color: Cyan;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: White;
+}
+
+.navbar-default .navbar-brand {
+  padding: 10px 15px;
+}
+
+hr {
+  border-color: lightgray;
+}
+
+.btn-facebook {
+  color:#ffffff;
+  background-color:#3b5998;
+  border-color:transparent
+}
+
+.btn-telegram {
+  color:#ffffff;
+  background-color:#0088cc;
+  border-color:transparent
+}

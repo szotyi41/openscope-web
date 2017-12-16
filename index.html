@@ -1,25 +1,16 @@
 <!DOCTYPE html>
 <html lang="hu">
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="A magyar fordítóközösség oldala.">
-	<meta name="author" content="Úr Balázs" >
-	<link rel="Shortcut Icon" href="img/favicon.ico" type="image/x-icon">
-
-	<title>Openscope - Magyar szabad szoftver honosítók közössége</title>
-
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/custom.css" rel="stylesheet">
-</head>
-
-<body>
-	<div class="container">
-
-		<!-- Static navbar -->
-		<nav class="navbar navbar-default">
-			<div class="container-fluid">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="shortcut icon" href="images/openscope-logo.svg" />
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/overrides.css" />
+		<script data-main="js/openscope" src="js/require.min.js"></script>
+		<title>OpenScope | magyar szabad szoftver honosítók közössége</title>
+	</head>
+	<body>
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 						<span class="sr-only">Navigáció átváltása</span>
@@ -27,12 +18,12 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="index.html"><img src="img/scope_long.png" alt="Openscope"></a>
+					<a href="index.html"><img class="navbar-brand" src="images/openscope-white.png" alt="OpenScope" title="OpenScope" /></a>
 				</div>
-				<div id="navbar" class="navbar-collapse collapse">
+				<div id="navbar" class="collapse navbar-collapse">
 					<ul class="nav navbar-nav">
 						<li><a href="otrs/customer.pl?Action=Login&User=anonymous&Password=otrs123">Hibabejelentés</a></li>
-						<li><a href="szotar">Szótár</a></li>
+						<li><a href="#glossary">Szótár</a></li>
 						<li><a href="otrs/public.pl?Action=PublicFAQExplorer;CategoryID=8">Tananyag</a></li>
 						<li><a href="otrs/public.pl?Action=PublicFAQExplorer;CategoryID=6">Projektek</a></li>
 						<li><a href="otrs/public.pl?Action=PublicFAQExplorer;CategoryID=7">Fordítók</a></li>
@@ -40,42 +31,91 @@
 					<ul class="nav navbar-nav navbar-right">
 						<li><a href="otrs/customer.pl">Belépés / Regisztráció</a></li>
 					</ul>
-				</div><!--/.nav-collapse -->
-			</div><!--/.container-fluid -->
+				</div>
+			</div>
 		</nav>
 
-		<!-- Main component for a primary marketing message or call to action -->
-		<div class="jumbotron">
-			<h1>Magyar szabad szoftver honosítók közössége</h1>
-			<p>Az oldal legfontosabb feladata a magyar honosítással kapcsolatos teendők összefogása, új tagok toborzása. Ha te is részt szeretnél venni a munkánkban, akkor csatlakozz bátran!</p>
-		</div>
-		
-		<div class="container">
-      <div class="row">
-			<div class="col-md-4">
-				<h2>Olvasd el a tananyagot</h2>
-				<p>A fordításhoz nem angolul kell jól tudni, hanem magyarul. Az sem mindegy, hogy „kőbaltával” fordítunk, vagy fordítómemóriával ellátott többfunkciós programmal. Itt fogod megtalálni, hogy hogyan kell fordítani és melyik a javasolt program erre a célra.</p>
-				<p><a class="btn btn-default" href="otrs/public.pl?Action=PublicFAQExplorer;CategoryID=8" role="button">Tananyag</a></p>
+		<div class="container" style="padding-top: 70px;">
+			
+			<div class="row">
+				<div class="col-md-6" style="display: border-block;">
+					<h1>Koordinált honosítás</h1>
+					<p>
+						Az oldal legfontosabb feladata a szabad szoftverek magyar honosításával kapcsolatos teendők összefogása, és új tagok toborzása.
+						Ha te is részt szeretnél venni a munkánkban, akkor csatlakozz bátran!
+					</p>
+				</div>
+				<div class="col-md-6" align="center">
+					<img src="images/openscope.png" alt="OpenScope" title="OpenScope" style="max-width: 405px; width: 100%; padding: 35px 10px 10px;"/>
+				</div>
 			</div>
-			<div class="col-md-4">
-				<h2>Válassz csapatot</h2>
-				<p>Az lenne a legjobb, ha egy általad is használt program, projekt fordításában segítenél, de ha teljesen mindegy, hogy mit fordítasz, itt akkor is meg fogod találni a számodra megfelelő projektet. Ha elolvastad a tananyagot, akkor válassz egy projektet.</p>
-				<p><a class="btn btn-default" href="otrs/public.pl?Action=PublicFAQExplorer;CategoryID=6" role="button">Projektek</a></p>
+
+			<hr>
+
+			<div class="row">
+				<div class="col-md-12" style="display: border-block;">
+					<h2>Szolgáltatások és kapcsolat</h2>
+					<p>
+						A projekt kerétében ezen az oldalon több szolgáltatást üzemeltetünk, ezek a következőek:
+						<ul>
+							<li><b>Hibabejelentő rendszer</b> – OTRS-alapú jegykezelő rendszer, szabad szoftveres projektben található hibák bejelentése, kezelése és követése</li>
+							<li><b>KanBan tábla</b> – az aktuális munka, és a várakozó feladatok nyomon követése</li>
+							<li><b>OpenScope szótár</b> – terminológiai szótár, szoftverprojektekre kihegyezve</li>
+						</ul>
+					</p>
+					<p>
+						Pillanatnyilag az elsődleges kommunikációs platformunk a Telegram, csatlakozzatok a csevegéshez.
+						Emellett rendelkezünk hivatalos Facebook oldallal is.
+					</p>
+					<p>
+						<a href="https://t.me/joinchat/DIfJOgiG22VjI1f616aZWA" class="btn btn-telegram" role="button">Csatlakozás a Telegramhoz &raquo;</a>
+						<a href="https://www.facebook.com/openscope.org/" class="btn btn-facebook" role="button">OpenScope Facebook oldal &raquo;</a>
+					</p>
+				</div>
 			</div>
-			<div class="col-md-4">
-				<h2>Konzultálj a vezetővel</h2>
-				<p>Minden csapatnak van egy vezetője, aki felel az adott projekt fordításáért. Sok mindent lehet fordítani, de mindig van, ami prioritást élvez. Keresd meg a vezetőt, konzutálj vele, kérj tőle feladatot.</p>
-				<p><a class="btn btn-default" href="otrs/public.pl?Action=PublicFAQExplorer;CategoryID=7" role="button">Fordítók</a></p>
+
+			<hr>
+
+			<div class="row">
+				<div class="col-md-4">
+					<h3>Olvasd el a tananyagot</h3>
+					<p>
+						A fordításhoz nem angolul kell jól tudni, hanem magyarul. 
+						Az sem mindegy, hogy „kőbaltával” fordítunk, vagy fordítómemóriával ellátott többfunkciós programmal.
+						Itt fogod megtalálni, hogy hogyan kell fordítani és melyik a javasolt program erre a célra.
+					</p>
+					<p>
+						<a class="btn btn-default" href="otrs/public.pl?Action=PublicFAQExplorer;CategoryID=8" role="button">Tananyag elolvasása &raquo;</a>
+					</p>
+				</div>
+				<div class="col-md-4">
+					<h3>Válassz csapatot</h3>
+					<p>
+						Az lenne a legjobb, ha egy általad is használt program, projekt fordításában segítenél. 
+						De ha teljesen mindegy, hogy mit fordítasz, itt akkor is meg fogod találni a számodra megfelelő projektet. 
+						Ha elolvastad a tananyagot, akkor válassz egy projektet.
+					</p>
+					<p>
+						<a class="btn btn-default" href="otrs/public.pl?Action=PublicFAQExplorer;CategoryID=6" role="button">Projektek megtekintése &raquo;</a>
+					</p>
+				</div>
+				<div class="col-md-4">
+					<h3>Beszélj a koordinátorral</h3>
+					<p>
+						Minden csapatnak van egy koordinátora, aki az adott projekt fordításáért felel.
+						Sok mindent lehet fordítani, de mindig van, ami prioritást élvez. 
+						Keresd meg a koordinátort, beszélj vele, és kérj tőle feladatot.
+					</p>
+					<p>
+						<a class="btn btn-default" href="otrs/public.pl?Action=PublicFAQExplorer;CategoryID=7" role="button">Fordítók megtekintése &raquo;</a>
+					</p>
+				</div>
 			</div>
-      </div>
 
-	</div> <!-- /container -->
+		</div> <!-- /container -->
 
-
-	<!-- Bootstrap core JavaScript
-	================================================== -->
-	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="js/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-</body>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/openscope.js"></script>
+	</body>
 </html>
