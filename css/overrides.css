@@ -22,14 +22,10 @@ hr {
   border-color: lightgray;
 }
 
-.btn-facebook {
-  color:#ffffff;
-  background-color:#3b5998;
-  border-color:transparent
-}
-
-.btn-telegram {
-  color:#ffffff;
-  background-color:#0088cc;
-  border-color:transparent
+.tab-pane {
+  background-color: White;
+  border-left: 1px solid #dfd7ca;
+  border-bottom: 1px solid #dfd7ca;
+  border-right: 1px solid #dfd7ca;
+  padding: 10px 10px 0;
 }

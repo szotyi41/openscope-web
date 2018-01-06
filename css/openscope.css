@@ -1,0 +1,19 @@
+.btn-facebook {
+  color:#ffffff;
+  background-color:#3b5998;
+  border-color:transparent
+}
+
+.btn-telegram {
+  color:#ffffff;
+  background-color:#0088cc;
+  border-color:transparent
+}
+
+.project-logos {
+    text-align: center;
+}
+.project-logo {
+    padding: 10px;
+    max-width: 100%;
+}

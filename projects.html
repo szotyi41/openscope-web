@@ -5,6 +5,7 @@
 		<link rel="shortcut icon" href="images/openscope-logo.svg" />
 		<link rel="stylesheet" href="css/bootstrap.min.css" />
 		<link rel="stylesheet" href="css/overrides.css" />
+		<link rel="stylesheet" href="css/openscope.css" />
 		<script data-main="js/openscope" src="js/require.min.js"></script>
 		<title>OpenScope | magyar szabad szoftver honosítók közössége</title>
 	</head>
@@ -38,10 +39,144 @@
 
 		<div class="container" style="padding-top: 70px;">
 
-			<div class="row">
+			<!--<div class="row">
+				<iframe name="kanboard" style="width: 100%; height: 400px; border: 0;">
 
+				</iframe>
+			</div>-->
+
+			<h1>Legnagyobb projektjeink</h1>
+			<hr>
+
+			<div class="row">
+				<div class="col-md-5 project-logos">
+					<img src="images/projects/gnome-logo.png" class="project-logo" alt="GNOME logo" title="GNOME logo"/><br>
+					<img src="images/projects/gnome-laptop-small.png" class="project-logo" alt="GNOME asztali környezet" title="GNOME asztali környezet"/>
+				</div>
+				<div class="col-md-7">
+					<h2>GNOME asztali környezet</h2>
+					<p>
+						<ul class="nav nav-tabs" role="tablist">
+							<li role="presentation" class="active">
+								<a href="#gnome-description" aria-controls="gnome-description" role="tab" data-toggle="tab">Leírás</a>
+							</li>
+							<li role="presentation">
+								<a href="#gnome-translation" aria-controls="gnome-translation" role="tab" data-toggle="tab">Fordítás menete</a>
+							</li>
+							<li role="presentation">
+								<a href="#gnome-team" aria-controls="gnome-team" role="tab" data-toggle="tab">Csapat</a>
+							</li>
+						</ul>
+
+						<div class="tab-content">
+							<div role="tabpanel" class="tab-pane active" id="gnome-description">
+								<p>
+									A GNOME az egyik legnagyobb asztali környezet a linuxos világban, és komponensei számos egyéb projektben megjelennek.
+									A felület évek óta mindig 100%-osan magyar fordítással rendelkezik minden egyes kiadásban, de a dokumentációval korántsem állunk ilyen jól, szükség volna a segítségre.
+								</p>
+								<p>
+									Ha szeretnél csatlakozni az erőfeszítéseinkhez, akkor jelentkezz a csapat tagjainál.
+								</p>
+							</div>
+							<div role="tabpanel" class="tab-pane" id="gnome-translation">
+								<p>
+									A GNOME projekt saját fordítási platformot használ, amely a <em>Szemenszedett hazugságok</em> névre hallgat.
+									Ez egy webalkalmazás, amely a statisztikát ad a fordítás állapotáról, illetve megkönnyíti a feladatok felosztását.
+								</p>
+								<p>
+									A fordítási munka a projektben az egyes felatok lefoglalásából, a .PO fájlok letöltéséből, és a kész fordítások feltöltéséből áll.
+									Maga a fordítási munka offline történik, a csapat tagjai a <b>Lokalize</b> és a <b>Poedit</b> programot használják, és ajánlják erre a célra.
+								</p>
+							</div>
+							<div role="tabpanel" class="tab-pane" id="gnome-team">
+								Jelenlegi csapattagok:
+								<ul>
+									<li>Kelemen Gábor &ndash; koordinátor</li>
+									<li>Hammer Attila &ndash; jóváhagyó</li>
+									<li>Úr Balázs &ndash; jóváhagyó</li>
+									<li>Meskó Balázs &ndash; fordító</li>
+								</ul>
+							</div>
+						</div>
+					</p>
+					<p>
+						<div>
+							<a href="https://gnome.org/" class="btn btn-default">GNOME.org &raquo;</a>
+							<a href="https://l10n.gnome.org/languages/hu/" class="btn btn-primary">Honosítási csapat &raquo;</a>
+						</div>
+					</p>
+				</div>
 			</div>
 
+			<hr>
+
+			<div class="row">
+				<div class="col-md-7">
+					<h2>Translation Project</h2>
+					<p>
+						<ul class="nav nav-tabs" role="tablist">
+							<li role="presentation" class="active">
+								<a href="#tp-description" aria-controls="tp-description" role="tab" data-toggle="tab">Leírás</a>
+							</li>
+							<li role="presentation">
+								<a href="#tp-translation" aria-controls="tp-translation" role="tab" data-toggle="tab">Fordítás menete</a>
+							</li>
+							<li role="presentation">
+								<a href="#tp-team" aria-controls="tp-team" role="tab" data-toggle="tab">Csapat</a>
+							</li>
+						</ul>
+
+						<div class="tab-content">
+							<div role="tabpanel" class="tab-pane active" id="tp-description">
+								<p>
+									A Translation Project számos, jellemzően parancssoros program fordítását fogja össze.
+									Relatíve sok minden fordítása elkészült már, de még bőven akad tennivaló.
+								</p>
+							</div>
+							<div role="tabpanel" class="tab-pane" id="tp-translation">
+								<p>
+									A fordítási munka itt is offline történik, a .PO fájlok letöltése után.
+									A fordítások feltöltése viszont e-mailben történik, és egy robot ellenőrzi a beküldéseket.
+								</p>
+								<p>
+									A fordítások beküldéséhez érdemes megkeresni a koordinátort, megkönnyítve az egyébként nehézkes folyamatot.
+								</p>
+							</div>
+							<div role="tabpanel" class="tab-pane" id="tp-team">
+								Jelenlegi csapat:
+								<ul>
+									<li>Úr Balázs &ndash; koordinátor</li>
+									<li>Kelemen Gábor &ndash; fordító</li>
+									<li>Kéménczy Kálmán &ndash; fordító</li>
+									<li>Meskó Balázs &ndash; fordító</li>
+									<li>Őry Máté &ndash; fordító</li>
+								</ul>
+							</div>
+						</div>
+					</p>
+					<p>
+						<div>
+							<a href="https://translationproject.org/html/welcome.html" class="btn btn-default">TranslationProject.org &raquo;</a>
+							<a href="https://translationproject.org/team/hu.html" class="btn btn-primary">Honosítási csapat &raquo;</a>
+						</div>
+					</p>
+				</div>
+				<div class="col-md-5 project-logos">
+					<img src="images/projects/tp-laptop-small.png" class="project-logo" alt="Translation Project" title="Translation Project" style="padding-top: 35px;"/>
+				</div>
+			</div>
+
+			<!--<hr>
+
+			<div class="row">
+				<div class="col-md-5 project-logos">
+					<img src="images/projects/fedora-logo-small.png" class="project-logo" alt="Fedora logo" title="Fedora logo"/><br>
+					<img src="images/projects/fedora-zanata-laptop-small.png" class="project-logo" alt="Fedora Zanata" title="Fedora Zanata"/>
+				</div>
+				<div class="col-md-7">
+					<h2>Fedora Projekt</h2>
+				</div>
+			</div>-->
 		</div>
 
 		<script type="text/javascript" src="js/jquery.min.js"></script>
